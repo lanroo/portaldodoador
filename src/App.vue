@@ -10,7 +10,11 @@
       <li class="navbar-item"><a href="#projetos">Projetos</a></li>
     </ul>
     <div class="navbar-profile">
-      <img src="https://img.icons8.com/?size=100&id=14736&format=png&color=000000" alt="Perfil" class="profile-icon" />
+      <a href="#perfil" class="profile-link">
+        <div class="profile-icon-wrapper">
+          <img src="https://img.icons8.com/?size=100&id=14736&format=png&color=000000" alt="Perfil" class="profile-icon" />
+        </div>
+      </a>
     </div>
   </nav>
 </template>
@@ -61,10 +65,25 @@ export default defineComponent({});
   align-items: center;
 }
 
+.profile-link {
+  display: inline-block;
+}
+
+.profile-icon-wrapper {
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid #333;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
 .profile-icon {
   width: 28px;
   height: 28px;
-  border-radius: 50%;
-  border: #333 solid;
+  display: block;
+}
+
+.profile-link:hover .profile-icon-wrapper {
+  transform: scale(1.1);
 }
 </style>
