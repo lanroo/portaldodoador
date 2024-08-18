@@ -10,20 +10,15 @@
       <li class="navbar-item"><a href="#projetos">Projetos</a></li>
     </ul>
     <div class="navbar-profile">
-      <Button icon="pi pi-user" class="p-button-rounded p-button-secondary" />
+      <img src="https://img.icons8.com/?size=100&id=14736&format=png&color=000000" alt="Perfil" class="profile-icon" />
     </div>
   </nav>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Button from 'primevue/button';
 
-export default defineComponent({
-  components: {
-    Button,
-  },
-});
+export default defineComponent({});
 </script>
 
 <style scoped>
@@ -33,7 +28,7 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: 'Poppins', sans-serif;
@@ -58,11 +53,18 @@ export default defineComponent({
 }
 
 .navbar-item a:hover {
-  color: #007bff;
+  color: #d41a23;
 }
 
 .navbar-profile {
   display: flex;
   align-items: center;
+}
+
+.profile-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: #333 solid;
 }
 </style>
